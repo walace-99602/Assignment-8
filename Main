@@ -1,0 +1,17 @@
+import turtle
+from circle import drawCircle
+
+# Setup the display screen
+screen = turtle.Screen()
+screen.setup(600, 600)
+screen.title("Random Color Sector Wheel")
+
+# Setup the drawing turtle
+chef = turtle.Turtle()
+chef.speed(0)  # Runs at maximum rendering speed
+
+# Execute the drawing function at center (0,0) with a 150-pixel radius
+drawCircle(chef, 0, 0, 150)
+
+# Keep the window from closing down automatically
+screen.mainloop()
