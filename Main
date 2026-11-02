@@ -16,20 +16,38 @@ chef.speed(0)  # Runs at maximum rendering speed
 # Execute the drawing function at center (0,0) with a 150-pixel radius
 drawCircle(chef, 0, 0, 150)
 
-#outline circle
-print("Starting outline circle")
+#outline circle 1
+print("Starting outline circle 1")
 outline_turtle = turtle.Turtle()
-outline_turtle.color("black")
+outline_turtle.color("red")
 outline_turtle.pensize(3) #thicker line makes it easier to differentiate
 outline_turtle.speed(2) #slower speed
 
 #position the outline turtle circle
 outline_turtle.up()
-outline_turtle.goto(0, -250)
+outline_turtle.goto(0, -200)
 outline_turtle.down()
 
+#draw outline turtle, 200 pixel radius
+outline_turtle.circle(200)
+
+#outline circle 2
+print("Starting outline Circle 2")
+outline_turtle2 = turtle.Turtle()
+outline_turtle2.color("black")
+outline_turtle2.pensize(5)
+outline_turtle2.speed(4)
+
+#position 2nd outline turtle circle
+outline_turtle2.up()
+outline_turtle2.goto(0, -250)
+outline_turtle2.down()
+
 #draw outline turtle, 250 pixel radius
-outline_turtle.circle(250)
+outline_turtle2.circle(250)
+
+
+
 
 print("Wheel within a wheel") #shows when it's done drawing the circle
 
