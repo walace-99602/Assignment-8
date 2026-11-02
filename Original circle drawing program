@@ -1,0 +1,12 @@
+"Draws a circle in a turtle window."
+
+import turtle
+
+# Create a turtle object
+t = turtle.Turtle()
+
+# Draw a circle with a radius of 200 pixels
+t.circle(200)
+
+# Keep the window open until clicked or closed
+turtle.done()
