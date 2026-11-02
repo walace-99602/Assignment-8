@@ -1,10 +1,13 @@
+
 import turtle
+import random
+import math
 from circle import drawCircle
 
-# Setup the display screen
+#1. Setup the display screen
 screen = turtle.Screen()
-screen.setup(600, 600)
-screen.title("Random Color Sector Wheel")
+screen.setup(700, 700)
+screen.title("Random Color Sector Wheel + original circle on the outside")
 
 # Setup the drawing turtle
 chef = turtle.Turtle()
@@ -13,5 +16,23 @@ chef.speed(0)  # Runs at maximum rendering speed
 # Execute the drawing function at center (0,0) with a 150-pixel radius
 drawCircle(chef, 0, 0, 150)
 
+#outline circle
+print("Starting outline circle")
+outline_turtle = turtle.Turtle()
+outline_turtle.color("black")
+outline_turtle.pensize(3) #thicker line makes it easier to differentiate
+outline_turtle.speed(2) #slower speed
+
+#position the outline turtle circle
+outline_turtle.up()
+outline_turtle.goto(0, -250)
+outline_turtle.down()
+
+#draw outline turtle, 250 pixel radius
+outline_turtle.circle(250)
+
+print("Wheel within a wheel") #shows when it's done drawing the circle
+
+
 # Keep the window from closing down automatically
-screen.mainloop()
+turtle.done()
